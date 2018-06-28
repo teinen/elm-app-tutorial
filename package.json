@@ -1,0 +1,13 @@
+{
+  "name": "elm-app-tutorial",
+  "version": "1.0.0",
+  "description": "Single Page Application with Elm",
+  "main": "index.js",
+  "repository": "git@github.com:teinen/elm-app-tutorial.git",
+  "author": "諦念 <teinen.github@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "json-server": "0.9"
+  }
+}

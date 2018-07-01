@@ -8,8 +8,10 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "api": "node api.js",
     "build": "webpack",
-    "start": "webpack-dev-server --hot --inline"
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server --port 3000"
   },
   "dependencies": {
     "ace-css": "^1.1.0",

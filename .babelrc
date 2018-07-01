@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["env", { "modules": false }]
+  ],
+  "comments": false,
+  "env": {
+    "test": {
+      "presets": ["env"]
+    }
+  },
+  "ignore": [
+    "node_modules"
+  ]
+}

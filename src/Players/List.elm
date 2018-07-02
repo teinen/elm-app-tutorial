@@ -41,12 +41,12 @@ list players =
 
 
 
-playerRow : Player => Html Msg
+playerRow : Player -> Html Msg
 playerRow player =
     tr []
-        [ td [] [ player.id ]
-        , td [] [ player.name ]
-        , td [] [ toString player.level ]
+        [ td [] [ text player.id ]
+        , td [] [ text player.name ]
+        , td [] [ text (toString player.level) ]
         , td []
             []
         ]

@@ -1,24 +1,35 @@
 module Main exposing (..)
 
-import Html exposing (Html, div, text, program)
+import Navigation exposing (Location)
 import Messages exposing (Msg(..))
 import Models exposing (Model, initialModel)
-import Update exposing (update)
 import View exposing (view)
+import Update exposing (update)
 import Players.Commands exposing (fetchAll)
+import Routing exposing (Route)
 
-init : ( Model, Cmd Msg )
-init =
-    ( initialModel, Cmd.map PlayersMsg fetchAll )
+
+
+init : Location -> ( Model, Cmd Msg )
+init location =
+    let
+        currentRoute =
+            Routing.parseLocation location
+    in
+        ( initialModel currentRoute, Cmd.map PlayersMsg fetchAll )
+
+
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.none
 
--- MAIN
 
-main =
-    program
+
+-- MAIN
+main : Program Never Model Msg
+main  =
+    Navigation.program OnLocationChange
         { init = init
         , view = view
         , update = update

@@ -38,7 +38,7 @@ memberDecoder =
 
 saveUrl : PlayerId -> String
 saveUrl playerId =
-    "http://localhost:4000/players" ++ playerId
+    "http://localhost:4000/players/" ++ playerId
 
 
 
